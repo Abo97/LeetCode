@@ -1,1 +1,27 @@
+Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right.
 
+Note that elements beyond the length of the original array are not written.
+
+Do the above modifications to the input array in place, do not return anything from your function.
+
+Example 1:
+
+Input: [1,0,2,3,0,4,5,0]
+Output: null
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+Example 2:
+
+Input: [1,2,3]
+Output: null
+Explanation: After calling your function, the input array is modified to: [1,2,3]
+ 
+
+Note:
+
+1 <= arr.length <= 10000
+0 <= arr[i] <= 9
+
+实现原地复写：
+两次遍历，第一次统计0个数offset，
+第二次从右向左遍历，遇到0，offset递减，复写“当前位置+偏移”和“当前位置+偏移+1”两个位置为0；遇到非0，复写“当前位置+偏移”为当前数值
+注意边界条件
