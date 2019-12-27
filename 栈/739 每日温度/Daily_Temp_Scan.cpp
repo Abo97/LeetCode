@@ -1,3 +1,7 @@
+/*
+    Time: 380ms
+    Memory: 14.7MB
+*/
 class Solution {
 public:
     vector<int> dailyTemperatures(vector<int>& T){
