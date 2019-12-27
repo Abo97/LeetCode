@@ -1,3 +1,7 @@
+/*
+	Time: 28ms
+	Memory: 8.5MB
+*/
 int dir[4][2] = {{0,1},{0,-1},{1,0},{-1,0}};
 
 bool dfs(int x, int y, int index, char** board, int boardSize, int* boardColSize, char * word, int** visited){
