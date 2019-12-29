@@ -1,6 +1,6 @@
 /*
-	Time: 28ms
-	Memory: 10.6MB
+	Time: 28ms（压缩前）12ms（压缩后）
+	Memory: 10.7MB
 */
 class Solution {
 public:
@@ -10,6 +10,8 @@ public:
     {
         while(x!=parent[x])
         {
+			//路径压缩
+			parent[x] = parent[parent[x]];
             x = parent[x];
         }
         return x;
